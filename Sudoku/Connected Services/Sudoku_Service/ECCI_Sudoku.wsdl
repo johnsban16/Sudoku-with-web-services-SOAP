@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:ECCI_Sudoku" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="ECCI_Sudoku" targetNamespace="urn:ECCI_Sudoku" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:ECCI_Sudoku" />
+  </wsdl:types>
+  <wsdl:message name="checkRowIn">
+    <wsdl:part name="rowNum" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="checkRowOut">
+    <wsdl:part name="return" type="xsd:bool" />
+  </wsdl:message>
+  <wsdl:message name="checkColumnIn">
+    <wsdl:part name="columnNum" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="checkColumnOut">
+    <wsdl:part name="return" type="xsd:bool" />
+  </wsdl:message>
+  <wsdl:portType name="ECCI_SudokuPort">
+    <wsdl:operation name="checkRow">
+      <documentation>Sudoku::checkRow() Calcula la suma de los valores de una fila y retorna verdadero si la suma es 45.</documentation>
+      <wsdl:input message="tns:checkRowIn" />
+      <wsdl:output message="tns:checkRowOut" />
+    </wsdl:operation>
+    <wsdl:operation name="servidorEstampillaDeTiempo">
+      <documentation>Sudoku::checkColum() Calcula la suma de los valores de una columna y retorna verdadero si la suma es 45.</documentation>
+      <wsdl:input message="tns:checkColumnIn" />
+      <wsdl:output message="tns:checkColumnOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ECCI_SudokuBinding" type="tns:ECCI_SudokuPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="checkRow">
+      <soap:operation soapAction="urn:ECCI_Sudoku#Sudoku#checkRow" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkColumn">
+      <soap:operation soapAction="urn:ECCI_Sudoku#Sudoku#checkColumn" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ECCI_SudokuService">
+    <wsdl:port name="ECCI_SudokuPort" binding="tns:ECCI_SudokuBinding">
+      <soap:address location="http://titanic.ecci.ucr.ac.cr/~eb31548/TareaProgramada2/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
