@@ -24,6 +24,15 @@ namespace Sudoku.SudokuService {
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         bool checkColumn(int columnNum);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Sudoku#Sudoku#receiveValue", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        void receiveValue(int x, int y, int v);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Sudoku#Sudoku#sendPuzzleValues", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        string sendPuzzleValues();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -59,6 +68,14 @@ namespace Sudoku.SudokuService {
         
         public bool checkColumn(int columnNum) {
             return base.Channel.checkColumn(columnNum);
+        }
+        
+        public void receiveValue(int x, int y, int v) {
+            base.Channel.receiveValue(x, y, v);
+        }
+        
+        public string sendPuzzleValues() {
+            return base.Channel.sendPuzzleValues();
         }
     }
 }

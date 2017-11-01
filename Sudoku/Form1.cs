@@ -12,18 +12,12 @@ namespace Sudoku
     public partial class Form1 : Form
     {
         string[,] puzzle = new string[9, 9];
+        SudokuService.ECCI_SudokuPortClient sudokuWeb = new SudokuService.ECCI_SudokuPortClient();
 
         public Form1()
         {
             InitializeComponent();
-            int puzzleToPlay = new Random().Next(1, 2 + 1);
-            if (puzzleToPlay == 1)
-            {
-                createPuzzle1();
-            }
-            else {
-                createPuzzle2();
-            }
+            fillPuzzle();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -37,219 +31,255 @@ namespace Sudoku
             line.Dispose();
         }
 
-        private void position22_TextChanged(object sender, EventArgs e)
+        private void fillPuzzle()
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox23_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void createPuzzle1() {
-            m0Position01.Text = "2";
-            m0Position01.Enabled = false;
-
-            m0Position10.Text = "4";
-            m0Position10.Enabled = false;
-
-            m0Position21.Text = "7";
-            m0Position21.Enabled = false;
-
-            m1Position20.Text = "4";
-            m1Position20.Enabled = false;
-
-            m1Position21.Text = "6";
-            m1Position21.Enabled = false;
-
-            m1Position22.Text = "8";
-            m1Position22.Enabled = false;
-
-            m2Position00.Text = "6";
-            m2Position00.Enabled = false;
-
-            m2Position22.Text = "3";
-            m2Position22.Enabled = false;
-
-            m3Position00.Text = "6";
-            m3Position00.Enabled = false;
-
-            m3Position10.Text = "2";
-            m3Position10.Enabled = false;
-
-            m3Position21.Text = "4";
-            m3Position21.Enabled = false;
-
-            m3Position22.Text = "8";
-            m3Position22.Enabled = false;
-
-            m4Position01.Text = "8";
-            m4Position01.Enabled = false;
-
-            m4Position12.Text = "6";
-            m4Position12.Enabled = false;
-
-            m4Position22.Text = "5";
-            m4Position22.Enabled = false;
-
-            m5Position01.Text = "9";
-            m5Position01.Enabled = false;
-
-            m5Position10.Text = "3";
-            m5Position10.Enabled = false;
-
-            m5Position12.Text = "5";
-            m5Position12.Enabled = false;
-
-            m5Position20.Text = "7";
-            m5Position20.Enabled = false;
-
-            m6Position00.Text = "8";
-            m6Position00.Enabled = false;
-
-            m6Position01.Text = "5";
-            m6Position01.Enabled = false;
-
-            m7Position01.Text = "9";
-            m7Position01.Enabled = false;
-
-            m7Position02.Text = "7";
-            m7Position02.Enabled = false;
-
-            m7Position11.Text = "5";
-            m7Position11.Enabled = false;
-
-            m7Position12.Text = "4";
-            m7Position12.Enabled = false;
-
-            m7Position20.Text = "8";
-            m7Position20.Enabled = false;
-
-            m7Position21.Text = "1";
-            m7Position21.Enabled = false;
-
-            m8Position02.Text = "6";
-            m8Position02.Enabled = false;
-
-            m8Position12.Text = "2";
-            m8Position12.Enabled = false;
-
-            m8Position21.Text = "5";
-            m8Position21.Enabled = false;
-
-            m8Position22.Text = "9";
-            m8Position22.Enabled = false;
-        }
-
-        private void createPuzzle2() {
-            m0Position01.Text = "7";
-            m0Position01.Enabled = false;
-
-            m0Position10.Text = "6";
-            m0Position10.Enabled = false;
-
-            m1Position00.Text = "6";
-            m1Position00.Enabled = false;
-
-            m1Position11.Text = "9";
-            m1Position11.Enabled = false;
-
-            m1Position20.Text = "8";
-            m1Position20.Enabled = false;
-
-            m1Position21.Text = "4";
-            m1Position21.Enabled = false;
-
-            m2Position01.Text = "9";
-            m2Position01.Enabled = false;
-
-            m2Position10.Text = "7";
-            m2Position10.Enabled = false;
-
-            m2Position12.Text = "2";
-            m2Position12.Enabled = false;
-
-            m2Position21.Text = "3";
-            m2Position21.Enabled = false;
-
-            m2Position22.Text = "5";
-            m2Position22.Enabled = false;
-
-            m3Position02.Text = "5";
-            m3Position02.Enabled = false;
-
-            m3Position21.Text = "9";
-            m3Position21.Enabled = false;
-
-            m4Position01.Text = "3";
-            m4Position01.Enabled = false;
-
-            m4Position10.Text = "7";
-            m4Position10.Enabled = false;
-
-            m4Position22.Text = "2";
-            m4Position22.Enabled = false;
-
-            m5Position00.Text = "1";
-            m5Position00.Enabled = false;
-
-            m5Position01.Text = "7";
-            m5Position01.Enabled = false;
-
-            m5Position20.Text = "4";
-            m5Position20.Enabled = false;
-
-            m5Position22.Text = "3";
-            m5Position22.Enabled = false;
-
-            m6Position10.Text = "4";
-            m6Position10.Enabled = false;
-
-            m6Position12.Text = "8";
-            m6Position12.Enabled = false;
-
-            m6Position21.Text = "6";
-            m6Position21.Enabled = false;
-
-            m6Position22.Text = "7";
-            m6Position22.Enabled = false;
-
-            m7Position00.Text = "3";
-            m7Position00.Enabled = false;
-
-            m7Position10.Text = "2";
-            m7Position10.Enabled = false;
-
-            m7Position22.Text = "8";
-            m7Position22.Enabled = false;
-
-            m8Position01.Text = "8";
-            m8Position01.Enabled = false;
-
-            m8Position02.Text = "7";
-            m8Position02.Enabled = false;
-
-            m8Position11.Text = "5";
-            m8Position11.Enabled = false;
-
-            m8Position20.Text = "3";
-            m8Position20.Enabled = false;
-
-            SudokuService.ECCI_SudokuPortClient sudokuWeb = new SudokuService.ECCI_SudokuPortClient();
-            bool prueba = sudokuWeb.checkRow(1);
-            playerLabel.Text = prueba.ToString();
-
-        }
-
-        private void createPuzzle3() {
-            m0Position01.Text = "8";
-            m0Position01.Enabled = false;
+            string values = sudokuWeb.sendPuzzleValues();
+            string[] elements = values.Split(',');
+            Console.WriteLine(elements[0]);
+
+            m0Position00.Text = elements[0];
+            if (m0Position00.Text != "0")
+                m0Position00.Enabled = false;
+            m0Position01.Text = elements[1];
+            if (m0Position01.Text != "0")
+                m0Position01.Enabled = false;
+            m0Position02.Text = elements[2];
+            if (m0Position02.Text != "0")
+                m0Position02.Enabled = false;
+            m0Position10.Text = elements[3];
+            if (m0Position10.Text != "0")
+                m0Position10.Enabled = false;
+            m0Position11.Text = elements[4];
+            if (m0Position11.Text != "0")
+                m0Position11.Enabled = false;
+            m0Position12.Text = elements[5];
+            if (m0Position12.Text != "0")
+                m0Position12.Enabled = false;
+            m0Position20.Text = elements[6];
+            if (m0Position20.Text != "0")
+                m0Position20.Enabled = false;
+            m0Position21.Text = elements[7];
+            if (m0Position21.Text != "0")
+                m0Position21.Enabled = false;
+            m0Position22.Text = elements[8];
+            if (m0Position22.Text != "0")
+                m0Position22.Enabled = false;
+            m1Position00.Text = elements[9];
+            if (m1Position00.Text != "0")
+                m1Position00.Enabled = false;
+            m1Position01.Text = elements[10];
+            if (m1Position01.Text != "0")
+                m1Position01.Enabled = false;
+            m1Position02.Text = elements[11];
+            if (m1Position02.Text != "0")
+                m1Position02.Enabled = false;
+            m1Position10.Text = elements[12];
+            if (m1Position10.Text != "0")
+                m1Position10.Enabled = false;
+            m1Position11.Text = elements[13];
+            if (m1Position11.Text != "0")
+                m1Position11.Enabled = false;
+            m1Position12.Text = elements[14];
+            if (m1Position12.Text != "0")
+                m1Position12.Enabled = false;
+            m1Position20.Text = elements[15];
+            if (m1Position20.Text != "0")
+                m1Position20.Enabled = false;
+            m1Position21.Text = elements[16];
+            if (m1Position21.Text != "0")
+                m1Position21.Enabled = false;
+            m1Position22.Text = elements[17];
+            if (m1Position22.Text != "0")
+                m1Position22.Enabled = false;
+            m2Position00.Text = elements[18];
+            if (m2Position00.Text != "0")
+                m2Position00.Enabled = false;
+            m2Position01.Text = elements[19];
+            if (m2Position01.Text != "0")
+                m2Position01.Enabled = false;
+            m2Position02.Text = elements[20];
+            if (m2Position02.Text != "0")
+                m2Position02.Enabled = false;
+            m2Position10.Text = elements[21];
+            if (m2Position10.Text != "0")
+                m2Position10.Enabled = false;
+            m2Position11.Text = elements[22];
+            if (m2Position11.Text != "0")
+                m2Position11.Enabled = false;
+            m2Position12.Text = elements[23];
+            if (m2Position12.Text != "0")
+                m2Position12.Enabled = false;
+            m2Position20.Text = elements[24];
+            if (m2Position20.Text != "0")
+                m2Position20.Enabled = false;
+            m2Position21.Text = elements[25];
+            if (m2Position21.Text != "0")
+                m2Position21.Enabled = false;
+            m2Position22.Text = elements[26];
+            if (m2Position22.Text != "0")
+                m2Position22.Enabled = false;
+            m3Position00.Text = elements[27];
+            if (m3Position00.Text != "0")
+                m3Position00.Enabled = false;
+            m3Position01.Text = elements[28];
+            if (m3Position01.Text != "0")
+                m3Position01.Enabled = false;
+            m3Position02.Text = elements[29];
+            if (m3Position02.Text != "0")
+                m3Position02.Enabled = false;
+            m3Position10.Text = elements[30];
+            if (m3Position10.Text != "0")
+                m3Position10.Enabled = false;
+            m3Position11.Text = elements[31];
+            if (m3Position11.Text != "0")
+                m3Position11.Enabled = false;
+            m3Position12.Text = elements[32];
+            if (m3Position12.Text != "0")
+                m3Position12.Enabled = false;
+            m3Position20.Text = elements[33];
+            if (m3Position20.Text != "0")
+                m3Position20.Enabled = false;
+            m3Position21.Text = elements[34];
+            if (m3Position21.Text != "0")
+                m3Position21.Enabled = false;
+            m3Position22.Text = elements[35];
+            if (m3Position22.Text != "0")
+                m3Position22.Enabled = false;
+            m4Position00.Text = elements[36];
+            if (m4Position00.Text != "0")
+                m4Position00.Enabled = false;
+            m4Position01.Text = elements[37];
+            if (m4Position01.Text != "0")
+                m4Position01.Enabled = false;
+            m4Position02.Text = elements[38];
+            if (m4Position02.Text != "0")
+                m4Position02.Enabled = false;
+            m4Position10.Text = elements[39];
+            if (m4Position10.Text != "0")
+                m4Position10.Enabled = false;
+            m4Position11.Text = elements[40];
+            if (m4Position11.Text != "0")
+                m4Position11.Enabled = false;
+            m4Position12.Text = elements[41];
+            if (m4Position12.Text != "0")
+                m4Position12.Enabled = false;
+            m4Position20.Text = elements[42];
+            if (m4Position20.Text != "0")
+                m4Position20.Enabled = false;
+            m4Position21.Text = elements[43];
+            if (m4Position21.Text != "0")
+                m4Position21.Enabled = false;
+            m4Position22.Text = elements[44];
+            if (m4Position22.Text != "0")
+                m4Position22.Enabled = false;
+            m5Position00.Text = elements[45];
+            if (m5Position00.Text != "0")
+                m5Position00.Enabled = false;
+            m5Position01.Text = elements[46];
+            if (m5Position01.Text != "0")
+                m5Position01.Enabled = false;
+            m5Position02.Text = elements[47];
+            if (m5Position02.Text != "0")
+                m5Position02.Enabled = false;
+            m5Position10.Text = elements[48];
+            if (m5Position10.Text != "0")
+                m5Position10.Enabled = false;
+            m5Position11.Text = elements[49];
+            if (m5Position11.Text != "0")
+                m5Position11.Enabled = false;
+            m5Position12.Text = elements[50];
+            if (m5Position12.Text != "0")
+                m5Position12.Enabled = false;
+            m5Position20.Text = elements[51];
+            if (m5Position20.Text != "0")
+                m5Position20.Enabled = false;
+            m5Position21.Text = elements[52];
+            if (m5Position21.Text != "0")
+                m5Position21.Enabled = false;
+            m5Position22.Text = elements[53];
+            if (m5Position22.Text != "0")
+                m5Position22.Enabled = false;
+            m6Position00.Text = elements[54];
+            if (m6Position00.Text != "0")
+                m6Position00.Enabled = false;
+            m6Position01.Text = elements[55];
+            if (m6Position01.Text != "0")
+                m6Position01.Enabled = false;
+            m6Position02.Text = elements[56];
+            if (m6Position02.Text != "0")
+                m6Position02.Enabled = false;
+            m6Position10.Text = elements[57];
+            if (m6Position10.Text != "0")
+                m6Position10.Enabled = false;
+            m6Position11.Text = elements[58];
+            if (m6Position11.Text != "0")
+                m6Position11.Enabled = false;
+            m6Position12.Text = elements[59];
+            if (m6Position12.Text != "0")
+                m6Position12.Enabled = false;
+            m6Position20.Text = elements[60];
+            if (m6Position20.Text != "0")
+                m6Position20.Enabled = false;
+            m6Position21.Text = elements[61];
+            if (m6Position21.Text != "0")
+                m6Position21.Enabled = false;
+            m6Position22.Text = elements[62];
+            if (m6Position22.Text != "0")
+                m6Position22.Enabled = false;
+            m7Position00.Text = elements[63];
+            if (m7Position00.Text != "0")
+                m7Position00.Enabled = false;
+            m7Position01.Text = elements[64];
+            if (m7Position01.Text != "0")
+                m7Position01.Enabled = false;
+            m7Position02.Text = elements[65];
+            if (m7Position02.Text != "0")
+                m7Position02.Enabled = false;
+            m7Position10.Text = elements[66];
+            if (m7Position10.Text != "0")
+                m7Position10.Enabled = false;
+            m7Position11.Text = elements[67];
+            if (m7Position11.Text != "0")
+                m7Position11.Enabled = false;
+            m7Position12.Text = elements[68];
+            if (m7Position12.Text != "0")
+                m7Position12.Enabled = false;
+            m7Position20.Text = elements[69];
+            if (m7Position20.Text != "0")
+                m7Position20.Enabled = false;
+            m7Position21.Text = elements[70];
+            if (m7Position21.Text != "0")
+                m7Position21.Enabled = false;
+            m7Position22.Text = elements[71];
+            if (m7Position22.Text != "0")
+                m7Position22.Enabled = false;
+            m8Position00.Text = elements[72];
+            if (m8Position00.Text != "0")
+                m8Position00.Enabled = false;
+            m8Position01.Text = elements[73];
+            if (m8Position01.Text != "0")
+                m8Position01.Enabled = false;
+            m8Position02.Text = elements[74];
+            if (m8Position02.Text != "0")
+                m8Position02.Enabled = false;
+            m8Position10.Text = elements[75];
+            if (m8Position10.Text != "0")
+                m8Position10.Enabled = false;
+            m8Position11.Text = elements[76];
+            if (m8Position11.Text != "0")
+                m8Position11.Enabled = false;
+            m8Position12.Text = elements[77];
+            if (m8Position12.Text != "0")
+                m8Position12.Enabled = false;
+            m8Position20.Text = elements[78];
+            if (m8Position20.Text != "0")
+                m8Position20.Enabled = false;
+            m8Position21.Text = elements[79];
+            if (m8Position21.Text != "0")
+                m8Position21.Enabled = false;
+            m8Position22.Text = elements[80];
+            if (m8Position22.Text != "0")
+                m8Position22.Enabled = false;
         }
     }
 }

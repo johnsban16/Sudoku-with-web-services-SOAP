@@ -192,7 +192,6 @@
             this.m0Position22.Size = new System.Drawing.Size(20, 20);
             this.m0Position22.TabIndex = 8;
             this.m0Position22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.m0Position22.TextChanged += new System.EventHandler(this.position22_TextChanged);
             // 
             // playerLabel
             // 
@@ -375,7 +374,6 @@
             this.m3Position22.Size = new System.Drawing.Size(20, 20);
             this.m3Position22.TabIndex = 36;
             this.m3Position22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.m3Position22.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // m3Position21
             // 
@@ -655,7 +653,6 @@
             this.m6Position11.Size = new System.Drawing.Size(20, 20);
             this.m6Position11.TabIndex = 59;
             this.m6Position11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.m6Position11.TextChanged += new System.EventHandler(this.textBox23_TextChanged);
             // 
             // m6Position10
             // 

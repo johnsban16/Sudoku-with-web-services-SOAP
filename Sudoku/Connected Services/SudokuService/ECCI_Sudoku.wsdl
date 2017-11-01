@@ -15,6 +15,16 @@
   <wsdl:message name="checkColumnOut">
     <wsdl:part name="return" type="xsd:boolean" />
   </wsdl:message>
+  <wsdl:message name="receiveValueIn">
+    <wsdl:part name="x" type="xsd:int" />
+    <wsdl:part name="y" type="xsd:int" />
+    <wsdl:part name="v" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="receiveValueOut" />
+  <wsdl:message name="sendPuzzleValuesIn" />
+  <wsdl:message name="sendPuzzleValuesOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
   <wsdl:portType name="ECCI_SudokuPort">
     <wsdl:operation name="checkRow">
       <documentation>Sudoku::checkRow() Calcula la suma de los valores de una fila y retorna verdadero si la suma es 45.</documentation>
@@ -25,6 +35,16 @@
       <documentation>Sudoku::checkColum() Calcula la suma de los valores de una columna y retorna verdadero si la suma es 45.</documentation>
       <wsdl:input message="tns:checkColumnIn" />
       <wsdl:output message="tns:checkColumnOut" />
+    </wsdl:operation>
+    <wsdl:operation name="receiveValue">
+      <documentation>Sudoku::receiveValue() Recibe la posicion de una celda en la matriz y el para actualizar la celda.</documentation>
+      <wsdl:input message="tns:receiveValueIn" />
+      <wsdl:output message="tns:receiveValueOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendPuzzleValues">
+      <documentation>Sudoku::sendPuzzleValues() Envia todos los valores de la matriz al cliente en forma de string. Separa columnas por ',' y filas por '|'</documentation>
+      <wsdl:input message="tns:sendPuzzleValuesIn" />
+      <wsdl:output message="tns:sendPuzzleValuesOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ECCI_SudokuBinding" type="tns:ECCI_SudokuPort">
@@ -40,6 +60,24 @@
     </wsdl:operation>
     <wsdl:operation name="checkColumn">
       <soap:operation soapAction="urn:ECCI_Sudoku#Sudoku#checkColumn" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="receiveValue">
+      <soap:operation soapAction="urn:ECCI_Sudoku#Sudoku#receiveValue" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendPuzzleValues">
+      <soap:operation soapAction="urn:ECCI_Sudoku#Sudoku#sendPuzzleValues" />
       <wsdl:input>
         <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
