@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Descripción WSDL de la clase Hola Mundo. -->
+<!-- Descripción WSDL de la clase Sudoku. -->
 
 <definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
              xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
@@ -17,7 +17,7 @@
 		<xsd:schema targetNamespace="urn:ECCI_Sudoku"/>
 	</types>
 
-	<!-- Mensajes para comunicarse con la clase HolaMundo. -->
+	<!-- Mensajes para comunicarse con la clase Sudoku. -->
 
 	<message name="checkRowIn">
 		<part name="rowNum" type="xsd:int"/>
@@ -35,6 +35,40 @@
 		<part name="return" type="xsd:boolean"/>
 	</message>
 
+	<message name="checkSubmatrixIn">
+		<part name="submatrixNum" type="xsd:int"/>
+	</message>
+
+	<message name="checkSubmatrixOut">
+		<part name="return" type="xsd:boolean"/>
+	</message>
+
+	<message name="receiveValueIn">
+		<part name="x" type="xsd:int"/>
+		<part name="y" type="xsd:int"/>
+		<part name="v" type="xsd:int"/>
+	</message>
+
+	<message name="receiveValueOut"/>
+
+	<message name="sendPuzzleValuesIn"/>
+
+	<message name="sendPuzzleValuesOut">
+		<part name="return" type="xsd:string"/>
+	</message>
+
+	<message name="receivePuzzleIn">
+		<part name="puzzleClient" type="xsd:string"/>
+	</message>
+
+	<message name="receivePuzzleOut"/>
+
+	<message name="winGameIn"/>
+
+	<message name="winGameOut">
+		<part name="return" type="xsd:boolean"/>
+	</message>
+
 	<!-- Puerto para comunicar con la clase Sudoku, "Sudoku" -->
 
 	<portType name="ECCI_SudokuPort">
@@ -47,6 +81,31 @@
 			<documentation>Sudoku::checkColum() Calcula la suma de los valores de una columna y retorna verdadero si la suma es 45.</documentation>
 			<input message="tns:checkColumnIn"/>
 			<output message="tns:checkColumnOut"/>
+		</operation>
+		<operation name="receiveValue">
+			<documentation>Sudoku::receiveValue() Recibe la posicion de una celda en la matriz y el para actualizar la celda.</documentation>
+			<input message="tns:receiveValueIn"/>
+			<output message="tns:receiveValueOut"/>
+		</operation>
+		<operation name="sendPuzzleValues">
+			<documentation>Sudoku::sendPuzzleValues() Envia todos los valores de la matriz al cliente en forma de string. Separa columnas por ',' y filas por '|'</documentation>
+			<input message="tns:sendPuzzleValuesIn"/>
+			<output message="tns:sendPuzzleValuesOut"/>
+		</operation>
+		<operation name="checkSubmatrix">
+			<documentation>Sudoku::checkSubmatrix() Calcula la suma de los valores de una submatriz y retorna verdadero si la suma es 45.</documentation>
+			<input message="tns:checkSubmatrixIn"/>
+			<output message="tns:checkSubmatrixOut"/>
+		</operation>
+		<operation name="receivePuzzle">
+			<documentation>Sudoku::receivePuzzle() Recibe los valores que cambia el usuario en el cliente y actualiza la matriz del servidor.</documentation>
+			<input message="tns:receivePuzzleIn"/>
+			<output message="tns:receivePuzzleOut"/>
+		</operation>
+		<operation name="winGame">
+			<documentation>Sudoku::winGame() Determina el gane del juego.</documentation>
+			<input message="tns:winGameIn"/>
+			<output message="tns:winGameOut"/>
 		</operation>
 	</portType>
 
@@ -71,6 +130,76 @@
 		
 		<operation name="checkColumn">
 			<soap:operation soapAction="urn:ECCI_Sudoku#Sudoku#checkColumn"/>
+			<input>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Sudoku"/>
+			</input>
+			<output>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Sudoku"/>
+			</output>
+		</operation>
+
+		<operation name="receiveValue">
+			<soap:operation soapAction="urn:ECCI_Sudoku#Sudoku#receiveValue"/>
+			<input>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Sudoku"/>
+			</input>
+			<output>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Sudoku"/>
+			</output>
+		</operation>
+
+		<operation name="sendPuzzleValues">
+			<soap:operation soapAction="urn:ECCI_Sudoku#Sudoku#sendPuzzleValues"/>
+			<input>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Sudoku"/>
+			</input>
+			<output>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Sudoku"/>
+			</output>
+		</operation>
+
+		<operation name="checkSubmatrix">
+			<soap:operation soapAction="urn:ECCI_Sudoku#Sudoku#checkSubmatrix"/>
+			<input>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Sudoku"/>
+			</input>
+			<output>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Sudoku"/>
+			</output>
+		</operation>
+
+		<operation name="receivePuzzle">
+			<soap:operation soapAction="urn:ECCI_Sudoku#Sudoku#receivePuzzle"/>
+			<input>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Sudoku"/>
+			</input>
+			<output>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Sudoku"/>
+			</output>
+		</operation>
+
+		<operation name="winGame">
+			<soap:operation soapAction="urn:ECCI_Sudoku#Sudoku#winGame"/>
 			<input>
 				<soap:body use="encoded"
 				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"

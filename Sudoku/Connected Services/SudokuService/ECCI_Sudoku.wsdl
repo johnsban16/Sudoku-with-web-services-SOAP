@@ -15,6 +15,12 @@
   <wsdl:message name="checkColumnOut">
     <wsdl:part name="return" type="xsd:boolean" />
   </wsdl:message>
+  <wsdl:message name="checkSubmatrixIn">
+    <wsdl:part name="submatrixNum" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="checkSubmatrixOut">
+    <wsdl:part name="return" type="xsd:boolean" />
+  </wsdl:message>
   <wsdl:message name="receiveValueIn">
     <wsdl:part name="x" type="xsd:int" />
     <wsdl:part name="y" type="xsd:int" />
@@ -24,6 +30,14 @@
   <wsdl:message name="sendPuzzleValuesIn" />
   <wsdl:message name="sendPuzzleValuesOut">
     <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="receivePuzzleIn">
+    <wsdl:part name="puzzleClient" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="receivePuzzleOut" />
+  <wsdl:message name="winGameIn" />
+  <wsdl:message name="winGameOut">
+    <wsdl:part name="return" type="xsd:boolean" />
   </wsdl:message>
   <wsdl:portType name="ECCI_SudokuPort">
     <wsdl:operation name="checkRow">
@@ -45,6 +59,21 @@
       <documentation>Sudoku::sendPuzzleValues() Envia todos los valores de la matriz al cliente en forma de string. Separa columnas por ',' y filas por '|'</documentation>
       <wsdl:input message="tns:sendPuzzleValuesIn" />
       <wsdl:output message="tns:sendPuzzleValuesOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkSubmatrix">
+      <documentation>Sudoku::checkSubmatrix() Calcula la suma de los valores de una submatriz y retorna verdadero si la suma es 45.</documentation>
+      <wsdl:input message="tns:checkSubmatrixIn" />
+      <wsdl:output message="tns:checkSubmatrixOut" />
+    </wsdl:operation>
+    <wsdl:operation name="receivePuzzle">
+      <documentation>Sudoku::receivePuzzle() Recibe los valores que cambia el usuario en el cliente y actualiza la matriz del servidor.</documentation>
+      <wsdl:input message="tns:receivePuzzleIn" />
+      <wsdl:output message="tns:receivePuzzleOut" />
+    </wsdl:operation>
+    <wsdl:operation name="winGame">
+      <documentation>Sudoku::winGame() Determina el gane del juego.</documentation>
+      <wsdl:input message="tns:winGameIn" />
+      <wsdl:output message="tns:winGameOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ECCI_SudokuBinding" type="tns:ECCI_SudokuPort">
@@ -78,6 +107,33 @@
     </wsdl:operation>
     <wsdl:operation name="sendPuzzleValues">
       <soap:operation soapAction="urn:ECCI_Sudoku#Sudoku#sendPuzzleValues" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkSubmatrix">
+      <soap:operation soapAction="urn:ECCI_Sudoku#Sudoku#checkSubmatrix" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="receivePuzzle">
+      <soap:operation soapAction="urn:ECCI_Sudoku#Sudoku#receivePuzzle" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="winGame">
+      <soap:operation soapAction="urn:ECCI_Sudoku#Sudoku#winGame" />
       <wsdl:input>
         <soap:body use="encoded" namespace="urn:ECCI_Sudoku" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>

@@ -33,6 +33,20 @@ namespace Sudoku.SudokuService {
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         string sendPuzzleValues();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Sudoku#Sudoku#checkSubmatrix", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        bool checkSubmatrix(int submatrixNum);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Sudoku#Sudoku#receivePuzzle", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        void receivePuzzle(string puzzleClient);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Sudoku#Sudoku#winGame", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        bool winGame();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -76,6 +90,18 @@ namespace Sudoku.SudokuService {
         
         public string sendPuzzleValues() {
             return base.Channel.sendPuzzleValues();
+        }
+        
+        public bool checkSubmatrix(int submatrixNum) {
+            return base.Channel.checkSubmatrix(submatrixNum);
+        }
+        
+        public void receivePuzzle(string puzzleClient) {
+            base.Channel.receivePuzzle(puzzleClient);
+        }
+        
+        public bool winGame() {
+            return base.Channel.winGame();
         }
     }
 }

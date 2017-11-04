@@ -110,11 +110,12 @@
             this.m8Position02 = new System.Windows.Forms.TextBox();
             this.m8Position01 = new System.Windows.Forms.TextBox();
             this.m8Position00 = new System.Windows.Forms.TextBox();
+            this.checkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // m0Position00
             // 
-            this.m0Position00.Location = new System.Drawing.Point(151, 61);
+            this.m0Position00.Location = new System.Drawing.Point(100, 64);
             this.m0Position00.MaxLength = 1;
             this.m0Position00.Name = "m0Position00";
             this.m0Position00.Size = new System.Drawing.Size(20, 20);
@@ -123,7 +124,7 @@
             // 
             // m0Position01
             // 
-            this.m0Position01.Location = new System.Drawing.Point(172, 61);
+            this.m0Position01.Location = new System.Drawing.Point(121, 64);
             this.m0Position01.MaxLength = 1;
             this.m0Position01.Name = "m0Position01";
             this.m0Position01.Size = new System.Drawing.Size(20, 20);
@@ -132,7 +133,7 @@
             // 
             // m0Position02
             // 
-            this.m0Position02.Location = new System.Drawing.Point(193, 61);
+            this.m0Position02.Location = new System.Drawing.Point(142, 64);
             this.m0Position02.MaxLength = 1;
             this.m0Position02.Name = "m0Position02";
             this.m0Position02.Size = new System.Drawing.Size(20, 20);
@@ -141,7 +142,7 @@
             // 
             // m0Position10
             // 
-            this.m0Position10.Location = new System.Drawing.Point(151, 82);
+            this.m0Position10.Location = new System.Drawing.Point(100, 85);
             this.m0Position10.MaxLength = 1;
             this.m0Position10.Name = "m0Position10";
             this.m0Position10.Size = new System.Drawing.Size(20, 20);
@@ -150,7 +151,7 @@
             // 
             // m0Position11
             // 
-            this.m0Position11.Location = new System.Drawing.Point(172, 82);
+            this.m0Position11.Location = new System.Drawing.Point(121, 85);
             this.m0Position11.MaxLength = 1;
             this.m0Position11.Name = "m0Position11";
             this.m0Position11.Size = new System.Drawing.Size(20, 20);
@@ -159,7 +160,7 @@
             // 
             // m0Position12
             // 
-            this.m0Position12.Location = new System.Drawing.Point(193, 82);
+            this.m0Position12.Location = new System.Drawing.Point(142, 85);
             this.m0Position12.MaxLength = 1;
             this.m0Position12.Name = "m0Position12";
             this.m0Position12.Size = new System.Drawing.Size(20, 20);
@@ -168,7 +169,7 @@
             // 
             // m0Position20
             // 
-            this.m0Position20.Location = new System.Drawing.Point(151, 103);
+            this.m0Position20.Location = new System.Drawing.Point(100, 106);
             this.m0Position20.MaxLength = 1;
             this.m0Position20.Name = "m0Position20";
             this.m0Position20.Size = new System.Drawing.Size(20, 20);
@@ -177,7 +178,7 @@
             // 
             // m0Position21
             // 
-            this.m0Position21.Location = new System.Drawing.Point(172, 103);
+            this.m0Position21.Location = new System.Drawing.Point(121, 106);
             this.m0Position21.MaxLength = 1;
             this.m0Position21.Name = "m0Position21";
             this.m0Position21.Size = new System.Drawing.Size(20, 20);
@@ -186,7 +187,7 @@
             // 
             // m0Position22
             // 
-            this.m0Position22.Location = new System.Drawing.Point(193, 103);
+            this.m0Position22.Location = new System.Drawing.Point(142, 106);
             this.m0Position22.MaxLength = 1;
             this.m0Position22.Name = "m0Position22";
             this.m0Position22.Size = new System.Drawing.Size(20, 20);
@@ -206,7 +207,7 @@
             // 
             // m1Position22
             // 
-            this.m1Position22.Location = new System.Drawing.Point(256, 103);
+            this.m1Position22.Location = new System.Drawing.Point(205, 106);
             this.m1Position22.MaxLength = 1;
             this.m1Position22.Name = "m1Position22";
             this.m1Position22.Size = new System.Drawing.Size(20, 20);
@@ -215,7 +216,7 @@
             // 
             // m1Position21
             // 
-            this.m1Position21.Location = new System.Drawing.Point(235, 103);
+            this.m1Position21.Location = new System.Drawing.Point(184, 106);
             this.m1Position21.MaxLength = 1;
             this.m1Position21.Name = "m1Position21";
             this.m1Position21.Size = new System.Drawing.Size(20, 20);
@@ -224,7 +225,7 @@
             // 
             // m1Position20
             // 
-            this.m1Position20.Location = new System.Drawing.Point(214, 103);
+            this.m1Position20.Location = new System.Drawing.Point(163, 106);
             this.m1Position20.MaxLength = 1;
             this.m1Position20.Name = "m1Position20";
             this.m1Position20.Size = new System.Drawing.Size(20, 20);
@@ -233,7 +234,7 @@
             // 
             // m1Position12
             // 
-            this.m1Position12.Location = new System.Drawing.Point(256, 82);
+            this.m1Position12.Location = new System.Drawing.Point(205, 85);
             this.m1Position12.MaxLength = 1;
             this.m1Position12.Name = "m1Position12";
             this.m1Position12.Size = new System.Drawing.Size(20, 20);
@@ -242,7 +243,7 @@
             // 
             // m1Position11
             // 
-            this.m1Position11.Location = new System.Drawing.Point(235, 82);
+            this.m1Position11.Location = new System.Drawing.Point(184, 85);
             this.m1Position11.MaxLength = 1;
             this.m1Position11.Name = "m1Position11";
             this.m1Position11.Size = new System.Drawing.Size(20, 20);
@@ -251,7 +252,7 @@
             // 
             // m1Position10
             // 
-            this.m1Position10.Location = new System.Drawing.Point(214, 82);
+            this.m1Position10.Location = new System.Drawing.Point(163, 85);
             this.m1Position10.MaxLength = 1;
             this.m1Position10.Name = "m1Position10";
             this.m1Position10.Size = new System.Drawing.Size(20, 20);
@@ -260,7 +261,7 @@
             // 
             // m1Position02
             // 
-            this.m1Position02.Location = new System.Drawing.Point(256, 61);
+            this.m1Position02.Location = new System.Drawing.Point(205, 64);
             this.m1Position02.MaxLength = 1;
             this.m1Position02.Name = "m1Position02";
             this.m1Position02.Size = new System.Drawing.Size(20, 20);
@@ -269,7 +270,7 @@
             // 
             // m1Position01
             // 
-            this.m1Position01.Location = new System.Drawing.Point(235, 61);
+            this.m1Position01.Location = new System.Drawing.Point(184, 64);
             this.m1Position01.MaxLength = 1;
             this.m1Position01.Name = "m1Position01";
             this.m1Position01.Size = new System.Drawing.Size(20, 20);
@@ -278,7 +279,7 @@
             // 
             // m1Position00
             // 
-            this.m1Position00.Location = new System.Drawing.Point(214, 61);
+            this.m1Position00.Location = new System.Drawing.Point(163, 64);
             this.m1Position00.MaxLength = 1;
             this.m1Position00.Name = "m1Position00";
             this.m1Position00.Size = new System.Drawing.Size(20, 20);
@@ -287,7 +288,7 @@
             // 
             // m2Position22
             // 
-            this.m2Position22.Location = new System.Drawing.Point(319, 103);
+            this.m2Position22.Location = new System.Drawing.Point(268, 106);
             this.m2Position22.MaxLength = 1;
             this.m2Position22.Name = "m2Position22";
             this.m2Position22.Size = new System.Drawing.Size(20, 20);
@@ -296,7 +297,7 @@
             // 
             // m2Position21
             // 
-            this.m2Position21.Location = new System.Drawing.Point(298, 103);
+            this.m2Position21.Location = new System.Drawing.Point(247, 106);
             this.m2Position21.MaxLength = 1;
             this.m2Position21.Name = "m2Position21";
             this.m2Position21.Size = new System.Drawing.Size(20, 20);
@@ -305,7 +306,7 @@
             // 
             // m2Position20
             // 
-            this.m2Position20.Location = new System.Drawing.Point(277, 103);
+            this.m2Position20.Location = new System.Drawing.Point(226, 106);
             this.m2Position20.MaxLength = 1;
             this.m2Position20.Name = "m2Position20";
             this.m2Position20.Size = new System.Drawing.Size(20, 20);
@@ -314,7 +315,7 @@
             // 
             // m2Position12
             // 
-            this.m2Position12.Location = new System.Drawing.Point(319, 82);
+            this.m2Position12.Location = new System.Drawing.Point(268, 85);
             this.m2Position12.MaxLength = 1;
             this.m2Position12.Name = "m2Position12";
             this.m2Position12.Size = new System.Drawing.Size(20, 20);
@@ -323,7 +324,7 @@
             // 
             // m2Position11
             // 
-            this.m2Position11.Location = new System.Drawing.Point(298, 82);
+            this.m2Position11.Location = new System.Drawing.Point(247, 85);
             this.m2Position11.MaxLength = 1;
             this.m2Position11.Name = "m2Position11";
             this.m2Position11.Size = new System.Drawing.Size(20, 20);
@@ -332,7 +333,7 @@
             // 
             // m2Position10
             // 
-            this.m2Position10.Location = new System.Drawing.Point(277, 82);
+            this.m2Position10.Location = new System.Drawing.Point(226, 85);
             this.m2Position10.MaxLength = 1;
             this.m2Position10.Name = "m2Position10";
             this.m2Position10.Size = new System.Drawing.Size(20, 20);
@@ -341,7 +342,7 @@
             // 
             // m2Position02
             // 
-            this.m2Position02.Location = new System.Drawing.Point(319, 61);
+            this.m2Position02.Location = new System.Drawing.Point(268, 64);
             this.m2Position02.MaxLength = 1;
             this.m2Position02.Name = "m2Position02";
             this.m2Position02.Size = new System.Drawing.Size(20, 20);
@@ -350,7 +351,7 @@
             // 
             // m2Position01
             // 
-            this.m2Position01.Location = new System.Drawing.Point(298, 61);
+            this.m2Position01.Location = new System.Drawing.Point(247, 64);
             this.m2Position01.MaxLength = 1;
             this.m2Position01.Name = "m2Position01";
             this.m2Position01.Size = new System.Drawing.Size(20, 20);
@@ -359,7 +360,7 @@
             // 
             // m2Position00
             // 
-            this.m2Position00.Location = new System.Drawing.Point(277, 61);
+            this.m2Position00.Location = new System.Drawing.Point(226, 64);
             this.m2Position00.MaxLength = 1;
             this.m2Position00.Name = "m2Position00";
             this.m2Position00.Size = new System.Drawing.Size(20, 20);
@@ -368,7 +369,7 @@
             // 
             // m3Position22
             // 
-            this.m3Position22.Location = new System.Drawing.Point(193, 166);
+            this.m3Position22.Location = new System.Drawing.Point(142, 169);
             this.m3Position22.MaxLength = 1;
             this.m3Position22.Name = "m3Position22";
             this.m3Position22.Size = new System.Drawing.Size(20, 20);
@@ -377,7 +378,7 @@
             // 
             // m3Position21
             // 
-            this.m3Position21.Location = new System.Drawing.Point(172, 166);
+            this.m3Position21.Location = new System.Drawing.Point(121, 169);
             this.m3Position21.MaxLength = 1;
             this.m3Position21.Name = "m3Position21";
             this.m3Position21.Size = new System.Drawing.Size(20, 20);
@@ -386,7 +387,7 @@
             // 
             // m3Position20
             // 
-            this.m3Position20.Location = new System.Drawing.Point(151, 166);
+            this.m3Position20.Location = new System.Drawing.Point(100, 169);
             this.m3Position20.MaxLength = 1;
             this.m3Position20.Name = "m3Position20";
             this.m3Position20.Size = new System.Drawing.Size(20, 20);
@@ -395,7 +396,7 @@
             // 
             // m3Position12
             // 
-            this.m3Position12.Location = new System.Drawing.Point(193, 145);
+            this.m3Position12.Location = new System.Drawing.Point(142, 148);
             this.m3Position12.MaxLength = 1;
             this.m3Position12.Name = "m3Position12";
             this.m3Position12.Size = new System.Drawing.Size(20, 20);
@@ -404,7 +405,7 @@
             // 
             // m3Position11
             // 
-            this.m3Position11.Location = new System.Drawing.Point(172, 145);
+            this.m3Position11.Location = new System.Drawing.Point(121, 148);
             this.m3Position11.MaxLength = 1;
             this.m3Position11.Name = "m3Position11";
             this.m3Position11.Size = new System.Drawing.Size(20, 20);
@@ -413,7 +414,7 @@
             // 
             // m3Position10
             // 
-            this.m3Position10.Location = new System.Drawing.Point(151, 145);
+            this.m3Position10.Location = new System.Drawing.Point(100, 148);
             this.m3Position10.MaxLength = 1;
             this.m3Position10.Name = "m3Position10";
             this.m3Position10.Size = new System.Drawing.Size(20, 20);
@@ -422,7 +423,7 @@
             // 
             // m3Position02
             // 
-            this.m3Position02.Location = new System.Drawing.Point(193, 124);
+            this.m3Position02.Location = new System.Drawing.Point(142, 127);
             this.m3Position02.MaxLength = 1;
             this.m3Position02.Name = "m3Position02";
             this.m3Position02.Size = new System.Drawing.Size(20, 20);
@@ -431,7 +432,7 @@
             // 
             // m3Position01
             // 
-            this.m3Position01.Location = new System.Drawing.Point(172, 124);
+            this.m3Position01.Location = new System.Drawing.Point(121, 127);
             this.m3Position01.MaxLength = 1;
             this.m3Position01.Name = "m3Position01";
             this.m3Position01.Size = new System.Drawing.Size(20, 20);
@@ -440,7 +441,7 @@
             // 
             // m3Position00
             // 
-            this.m3Position00.Location = new System.Drawing.Point(151, 124);
+            this.m3Position00.Location = new System.Drawing.Point(100, 127);
             this.m3Position00.MaxLength = 1;
             this.m3Position00.Name = "m3Position00";
             this.m3Position00.Size = new System.Drawing.Size(20, 20);
@@ -449,7 +450,7 @@
             // 
             // m4Position22
             // 
-            this.m4Position22.Location = new System.Drawing.Point(256, 166);
+            this.m4Position22.Location = new System.Drawing.Point(205, 169);
             this.m4Position22.MaxLength = 1;
             this.m4Position22.Name = "m4Position22";
             this.m4Position22.Size = new System.Drawing.Size(20, 20);
@@ -458,7 +459,7 @@
             // 
             // m4Position21
             // 
-            this.m4Position21.Location = new System.Drawing.Point(235, 166);
+            this.m4Position21.Location = new System.Drawing.Point(184, 169);
             this.m4Position21.MaxLength = 1;
             this.m4Position21.Name = "m4Position21";
             this.m4Position21.Size = new System.Drawing.Size(20, 20);
@@ -467,7 +468,7 @@
             // 
             // m4Position20
             // 
-            this.m4Position20.Location = new System.Drawing.Point(214, 166);
+            this.m4Position20.Location = new System.Drawing.Point(163, 169);
             this.m4Position20.MaxLength = 1;
             this.m4Position20.Name = "m4Position20";
             this.m4Position20.Size = new System.Drawing.Size(20, 20);
@@ -476,7 +477,7 @@
             // 
             // m4Position12
             // 
-            this.m4Position12.Location = new System.Drawing.Point(256, 145);
+            this.m4Position12.Location = new System.Drawing.Point(205, 148);
             this.m4Position12.MaxLength = 1;
             this.m4Position12.Name = "m4Position12";
             this.m4Position12.Size = new System.Drawing.Size(20, 20);
@@ -485,7 +486,7 @@
             // 
             // m4Position11
             // 
-            this.m4Position11.Location = new System.Drawing.Point(235, 145);
+            this.m4Position11.Location = new System.Drawing.Point(184, 148);
             this.m4Position11.MaxLength = 1;
             this.m4Position11.Name = "m4Position11";
             this.m4Position11.Size = new System.Drawing.Size(20, 20);
@@ -494,7 +495,7 @@
             // 
             // m4Position10
             // 
-            this.m4Position10.Location = new System.Drawing.Point(214, 145);
+            this.m4Position10.Location = new System.Drawing.Point(163, 148);
             this.m4Position10.MaxLength = 1;
             this.m4Position10.Name = "m4Position10";
             this.m4Position10.Size = new System.Drawing.Size(20, 20);
@@ -503,7 +504,7 @@
             // 
             // m4Position02
             // 
-            this.m4Position02.Location = new System.Drawing.Point(256, 124);
+            this.m4Position02.Location = new System.Drawing.Point(205, 127);
             this.m4Position02.MaxLength = 1;
             this.m4Position02.Name = "m4Position02";
             this.m4Position02.Size = new System.Drawing.Size(20, 20);
@@ -512,7 +513,7 @@
             // 
             // m4Position01
             // 
-            this.m4Position01.Location = new System.Drawing.Point(235, 124);
+            this.m4Position01.Location = new System.Drawing.Point(184, 127);
             this.m4Position01.MaxLength = 1;
             this.m4Position01.Name = "m4Position01";
             this.m4Position01.Size = new System.Drawing.Size(20, 20);
@@ -521,7 +522,7 @@
             // 
             // m4Position00
             // 
-            this.m4Position00.Location = new System.Drawing.Point(214, 124);
+            this.m4Position00.Location = new System.Drawing.Point(163, 127);
             this.m4Position00.MaxLength = 1;
             this.m4Position00.Name = "m4Position00";
             this.m4Position00.Size = new System.Drawing.Size(20, 20);
@@ -530,7 +531,7 @@
             // 
             // m5Position22
             // 
-            this.m5Position22.Location = new System.Drawing.Point(319, 166);
+            this.m5Position22.Location = new System.Drawing.Point(268, 169);
             this.m5Position22.MaxLength = 1;
             this.m5Position22.Name = "m5Position22";
             this.m5Position22.Size = new System.Drawing.Size(20, 20);
@@ -539,7 +540,7 @@
             // 
             // m5Position21
             // 
-            this.m5Position21.Location = new System.Drawing.Point(298, 166);
+            this.m5Position21.Location = new System.Drawing.Point(247, 169);
             this.m5Position21.MaxLength = 1;
             this.m5Position21.Name = "m5Position21";
             this.m5Position21.Size = new System.Drawing.Size(20, 20);
@@ -548,7 +549,7 @@
             // 
             // m5Position20
             // 
-            this.m5Position20.Location = new System.Drawing.Point(277, 166);
+            this.m5Position20.Location = new System.Drawing.Point(226, 169);
             this.m5Position20.MaxLength = 1;
             this.m5Position20.Name = "m5Position20";
             this.m5Position20.Size = new System.Drawing.Size(20, 20);
@@ -557,7 +558,7 @@
             // 
             // m5Position12
             // 
-            this.m5Position12.Location = new System.Drawing.Point(319, 145);
+            this.m5Position12.Location = new System.Drawing.Point(268, 148);
             this.m5Position12.MaxLength = 1;
             this.m5Position12.Name = "m5Position12";
             this.m5Position12.Size = new System.Drawing.Size(20, 20);
@@ -566,7 +567,7 @@
             // 
             // m5Position11
             // 
-            this.m5Position11.Location = new System.Drawing.Point(298, 145);
+            this.m5Position11.Location = new System.Drawing.Point(247, 148);
             this.m5Position11.MaxLength = 1;
             this.m5Position11.Name = "m5Position11";
             this.m5Position11.Size = new System.Drawing.Size(20, 20);
@@ -575,7 +576,7 @@
             // 
             // m5Position10
             // 
-            this.m5Position10.Location = new System.Drawing.Point(277, 145);
+            this.m5Position10.Location = new System.Drawing.Point(226, 148);
             this.m5Position10.MaxLength = 1;
             this.m5Position10.Name = "m5Position10";
             this.m5Position10.Size = new System.Drawing.Size(20, 20);
@@ -584,7 +585,7 @@
             // 
             // m5Position02
             // 
-            this.m5Position02.Location = new System.Drawing.Point(319, 124);
+            this.m5Position02.Location = new System.Drawing.Point(268, 127);
             this.m5Position02.MaxLength = 1;
             this.m5Position02.Name = "m5Position02";
             this.m5Position02.Size = new System.Drawing.Size(20, 20);
@@ -593,7 +594,7 @@
             // 
             // m5Position01
             // 
-            this.m5Position01.Location = new System.Drawing.Point(298, 124);
+            this.m5Position01.Location = new System.Drawing.Point(247, 127);
             this.m5Position01.MaxLength = 1;
             this.m5Position01.Name = "m5Position01";
             this.m5Position01.Size = new System.Drawing.Size(20, 20);
@@ -602,7 +603,7 @@
             // 
             // m5Position00
             // 
-            this.m5Position00.Location = new System.Drawing.Point(277, 124);
+            this.m5Position00.Location = new System.Drawing.Point(226, 127);
             this.m5Position00.MaxLength = 1;
             this.m5Position00.Name = "m5Position00";
             this.m5Position00.Size = new System.Drawing.Size(20, 20);
@@ -611,7 +612,7 @@
             // 
             // m6Position22
             // 
-            this.m6Position22.Location = new System.Drawing.Point(193, 229);
+            this.m6Position22.Location = new System.Drawing.Point(142, 232);
             this.m6Position22.MaxLength = 1;
             this.m6Position22.Name = "m6Position22";
             this.m6Position22.Size = new System.Drawing.Size(20, 20);
@@ -620,7 +621,7 @@
             // 
             // m6Position21
             // 
-            this.m6Position21.Location = new System.Drawing.Point(172, 229);
+            this.m6Position21.Location = new System.Drawing.Point(121, 232);
             this.m6Position21.MaxLength = 1;
             this.m6Position21.Name = "m6Position21";
             this.m6Position21.Size = new System.Drawing.Size(20, 20);
@@ -629,7 +630,7 @@
             // 
             // m6Position20
             // 
-            this.m6Position20.Location = new System.Drawing.Point(151, 229);
+            this.m6Position20.Location = new System.Drawing.Point(100, 232);
             this.m6Position20.MaxLength = 1;
             this.m6Position20.Name = "m6Position20";
             this.m6Position20.Size = new System.Drawing.Size(20, 20);
@@ -638,7 +639,7 @@
             // 
             // m6Position12
             // 
-            this.m6Position12.Location = new System.Drawing.Point(193, 208);
+            this.m6Position12.Location = new System.Drawing.Point(142, 211);
             this.m6Position12.MaxLength = 1;
             this.m6Position12.Name = "m6Position12";
             this.m6Position12.Size = new System.Drawing.Size(20, 20);
@@ -647,7 +648,7 @@
             // 
             // m6Position11
             // 
-            this.m6Position11.Location = new System.Drawing.Point(172, 208);
+            this.m6Position11.Location = new System.Drawing.Point(121, 211);
             this.m6Position11.MaxLength = 1;
             this.m6Position11.Name = "m6Position11";
             this.m6Position11.Size = new System.Drawing.Size(20, 20);
@@ -656,7 +657,7 @@
             // 
             // m6Position10
             // 
-            this.m6Position10.Location = new System.Drawing.Point(151, 208);
+            this.m6Position10.Location = new System.Drawing.Point(100, 211);
             this.m6Position10.MaxLength = 1;
             this.m6Position10.Name = "m6Position10";
             this.m6Position10.Size = new System.Drawing.Size(20, 20);
@@ -665,7 +666,7 @@
             // 
             // m6Position02
             // 
-            this.m6Position02.Location = new System.Drawing.Point(193, 187);
+            this.m6Position02.Location = new System.Drawing.Point(142, 190);
             this.m6Position02.MaxLength = 1;
             this.m6Position02.Name = "m6Position02";
             this.m6Position02.Size = new System.Drawing.Size(20, 20);
@@ -674,7 +675,7 @@
             // 
             // m6Position01
             // 
-            this.m6Position01.Location = new System.Drawing.Point(172, 187);
+            this.m6Position01.Location = new System.Drawing.Point(121, 190);
             this.m6Position01.MaxLength = 1;
             this.m6Position01.Name = "m6Position01";
             this.m6Position01.Size = new System.Drawing.Size(20, 20);
@@ -683,7 +684,7 @@
             // 
             // m6Position00
             // 
-            this.m6Position00.Location = new System.Drawing.Point(151, 187);
+            this.m6Position00.Location = new System.Drawing.Point(100, 190);
             this.m6Position00.MaxLength = 1;
             this.m6Position00.Name = "m6Position00";
             this.m6Position00.Size = new System.Drawing.Size(20, 20);
@@ -692,7 +693,7 @@
             // 
             // m7Position22
             // 
-            this.m7Position22.Location = new System.Drawing.Point(256, 229);
+            this.m7Position22.Location = new System.Drawing.Point(205, 232);
             this.m7Position22.MaxLength = 1;
             this.m7Position22.Name = "m7Position22";
             this.m7Position22.Size = new System.Drawing.Size(20, 20);
@@ -701,7 +702,7 @@
             // 
             // m7Position21
             // 
-            this.m7Position21.Location = new System.Drawing.Point(235, 229);
+            this.m7Position21.Location = new System.Drawing.Point(184, 232);
             this.m7Position21.MaxLength = 1;
             this.m7Position21.Name = "m7Position21";
             this.m7Position21.Size = new System.Drawing.Size(20, 20);
@@ -710,7 +711,7 @@
             // 
             // m7Position20
             // 
-            this.m7Position20.Location = new System.Drawing.Point(214, 229);
+            this.m7Position20.Location = new System.Drawing.Point(163, 232);
             this.m7Position20.MaxLength = 1;
             this.m7Position20.Name = "m7Position20";
             this.m7Position20.Size = new System.Drawing.Size(20, 20);
@@ -719,7 +720,7 @@
             // 
             // m7Position12
             // 
-            this.m7Position12.Location = new System.Drawing.Point(256, 208);
+            this.m7Position12.Location = new System.Drawing.Point(205, 211);
             this.m7Position12.MaxLength = 1;
             this.m7Position12.Name = "m7Position12";
             this.m7Position12.Size = new System.Drawing.Size(20, 20);
@@ -728,7 +729,7 @@
             // 
             // m7Position11
             // 
-            this.m7Position11.Location = new System.Drawing.Point(235, 208);
+            this.m7Position11.Location = new System.Drawing.Point(184, 211);
             this.m7Position11.MaxLength = 1;
             this.m7Position11.Name = "m7Position11";
             this.m7Position11.Size = new System.Drawing.Size(20, 20);
@@ -737,7 +738,7 @@
             // 
             // m7Position10
             // 
-            this.m7Position10.Location = new System.Drawing.Point(214, 208);
+            this.m7Position10.Location = new System.Drawing.Point(163, 211);
             this.m7Position10.MaxLength = 1;
             this.m7Position10.Name = "m7Position10";
             this.m7Position10.Size = new System.Drawing.Size(20, 20);
@@ -746,7 +747,7 @@
             // 
             // m7Position02
             // 
-            this.m7Position02.Location = new System.Drawing.Point(256, 187);
+            this.m7Position02.Location = new System.Drawing.Point(205, 190);
             this.m7Position02.MaxLength = 1;
             this.m7Position02.Name = "m7Position02";
             this.m7Position02.Size = new System.Drawing.Size(20, 20);
@@ -755,7 +756,7 @@
             // 
             // m7Position01
             // 
-            this.m7Position01.Location = new System.Drawing.Point(235, 187);
+            this.m7Position01.Location = new System.Drawing.Point(184, 190);
             this.m7Position01.MaxLength = 1;
             this.m7Position01.Name = "m7Position01";
             this.m7Position01.Size = new System.Drawing.Size(20, 20);
@@ -764,7 +765,7 @@
             // 
             // m7Position00
             // 
-            this.m7Position00.Location = new System.Drawing.Point(214, 187);
+            this.m7Position00.Location = new System.Drawing.Point(163, 190);
             this.m7Position00.MaxLength = 1;
             this.m7Position00.Name = "m7Position00";
             this.m7Position00.Size = new System.Drawing.Size(20, 20);
@@ -773,7 +774,7 @@
             // 
             // m8Position22
             // 
-            this.m8Position22.Location = new System.Drawing.Point(319, 229);
+            this.m8Position22.Location = new System.Drawing.Point(268, 232);
             this.m8Position22.MaxLength = 1;
             this.m8Position22.Name = "m8Position22";
             this.m8Position22.Size = new System.Drawing.Size(20, 20);
@@ -782,7 +783,7 @@
             // 
             // m8Position21
             // 
-            this.m8Position21.Location = new System.Drawing.Point(298, 229);
+            this.m8Position21.Location = new System.Drawing.Point(247, 232);
             this.m8Position21.MaxLength = 1;
             this.m8Position21.Name = "m8Position21";
             this.m8Position21.Size = new System.Drawing.Size(20, 20);
@@ -791,7 +792,7 @@
             // 
             // m8Position20
             // 
-            this.m8Position20.Location = new System.Drawing.Point(277, 229);
+            this.m8Position20.Location = new System.Drawing.Point(226, 232);
             this.m8Position20.MaxLength = 1;
             this.m8Position20.Name = "m8Position20";
             this.m8Position20.Size = new System.Drawing.Size(20, 20);
@@ -800,7 +801,7 @@
             // 
             // m8Position12
             // 
-            this.m8Position12.Location = new System.Drawing.Point(319, 208);
+            this.m8Position12.Location = new System.Drawing.Point(268, 211);
             this.m8Position12.MaxLength = 1;
             this.m8Position12.Name = "m8Position12";
             this.m8Position12.Size = new System.Drawing.Size(20, 20);
@@ -809,7 +810,7 @@
             // 
             // m8Position11
             // 
-            this.m8Position11.Location = new System.Drawing.Point(298, 208);
+            this.m8Position11.Location = new System.Drawing.Point(247, 211);
             this.m8Position11.MaxLength = 1;
             this.m8Position11.Name = "m8Position11";
             this.m8Position11.Size = new System.Drawing.Size(20, 20);
@@ -818,7 +819,7 @@
             // 
             // m8Position10
             // 
-            this.m8Position10.Location = new System.Drawing.Point(277, 208);
+            this.m8Position10.Location = new System.Drawing.Point(226, 211);
             this.m8Position10.MaxLength = 1;
             this.m8Position10.Name = "m8Position10";
             this.m8Position10.Size = new System.Drawing.Size(20, 20);
@@ -827,7 +828,7 @@
             // 
             // m8Position02
             // 
-            this.m8Position02.Location = new System.Drawing.Point(319, 187);
+            this.m8Position02.Location = new System.Drawing.Point(268, 190);
             this.m8Position02.MaxLength = 1;
             this.m8Position02.Name = "m8Position02";
             this.m8Position02.Size = new System.Drawing.Size(20, 20);
@@ -836,7 +837,7 @@
             // 
             // m8Position01
             // 
-            this.m8Position01.Location = new System.Drawing.Point(298, 187);
+            this.m8Position01.Location = new System.Drawing.Point(247, 190);
             this.m8Position01.MaxLength = 1;
             this.m8Position01.Name = "m8Position01";
             this.m8Position01.Size = new System.Drawing.Size(20, 20);
@@ -845,18 +846,29 @@
             // 
             // m8Position00
             // 
-            this.m8Position00.Location = new System.Drawing.Point(277, 187);
+            this.m8Position00.Location = new System.Drawing.Point(226, 190);
             this.m8Position00.MaxLength = 1;
             this.m8Position00.Name = "m8Position00";
             this.m8Position00.Size = new System.Drawing.Size(20, 20);
             this.m8Position00.TabIndex = 73;
             this.m8Position00.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // checkButton
+            // 
+            this.checkButton.Location = new System.Drawing.Point(347, 64);
+            this.checkButton.Name = "checkButton";
+            this.checkButton.Size = new System.Drawing.Size(75, 23);
+            this.checkButton.TabIndex = 82;
+            this.checkButton.Text = "Check";
+            this.checkButton.UseVisualStyleBackColor = true;
+            this.checkButton.Click += new System.EventHandler(this.checkButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 346);
+            this.ClientSize = new System.Drawing.Size(447, 308);
+            this.Controls.Add(this.checkButton);
             this.Controls.Add(this.m8Position22);
             this.Controls.Add(this.m8Position21);
             this.Controls.Add(this.m8Position20);
@@ -1031,6 +1043,7 @@
         private System.Windows.Forms.TextBox m8Position02;
         private System.Windows.Forms.TextBox m8Position01;
         private System.Windows.Forms.TextBox m8Position00;
+        private System.Windows.Forms.Button checkButton;
     }
 }
 
