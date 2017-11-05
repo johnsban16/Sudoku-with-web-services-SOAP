@@ -40,7 +40,7 @@ require_once 'Sudoku.class.php';
  
 if (isset($_GET['wsdl'])) {
 	header('Content-Type: application/soap+xml; charset=utf-8');
-	echo file_get_contents('Sudoku.wsdl');
+	echo file_get_contents('sudoku.wsdl');
 }
 else {
 	session_start();

@@ -35,7 +35,6 @@ namespace Sudoku
         {
             string values = sudokuWeb.sendPuzzleValues();
             string[] elements = values.Split(',');
-            Console.WriteLine(elements[0]);
             
             /*PRIMERA FILA DE LA MATRIZ*/
             m0Position00.Text = elements[0];
@@ -377,10 +376,17 @@ namespace Sudoku
             values += m8Position21.Text;
             values += m8Position22.Text;
 
+            
+            Console.WriteLine(values);
             sudokuWeb.receivePuzzle(values);
             win = sudokuWeb.winGame();
-            if (win) {
+            Console.WriteLine(sudokuWeb.sendPuzzleValues());
+            if (win == true)
+            {
                 MessageBox.Show("Ganaste el juego!", "Fin del juego");
+            }
+            else {
+                MessageBox.Show("No has ganado todavia.", "Por favor, sigue jugando");
             }
         }
     }
